@@ -42,9 +42,9 @@ export class AppInfoService {
   
     // return this.httpClient.get(this.apiURL + '/app')
 
-    return this.httpClient.get(this.apiURL + '/posts')  //sample api call to sample api url for checking the table css comment this and uncomment above line for 
-
-                                                        //getting actual data from flask app
+    return this.httpClient.get(this.apiURL + '/posts')  //sample api call to sample api url for checking the table css 
+    
+    //comment this and uncomment above line for getting actual data from flask app
   
     .pipe(
       catchError(this.errorHandler)
