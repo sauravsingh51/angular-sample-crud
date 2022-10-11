@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
+This is a sample project for making CRUD calls from angular UI to REST APIs exposed in the flask-crud-app repo.
+
+This project uses Bootstrap along with Angular for all the design and css.
+
+All the REST calls can be found out in 'app-info.service.ts' & model class for AppInfoModel in 'AppInfoModel.ts'.
+
+Note: please update apiURL & getAll() method according to the comment mentioned in 'app-info.service.ts' file.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
