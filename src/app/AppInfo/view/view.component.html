@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>View Apps</h1>
+  
+    <a href="#" routerLink="/app/index" class="btn btn-primary">Back</a>
+   
+    <div>
+        <strong>ID:</strong>
+        <p>{{ appInfoModel.id }}</p>
+    </div>
+   
+    <div>
+        <strong>Name:</strong>
+        <p>{{ appInfoModel.app_name }}</p>
+    </div>
+
+    <div>
+        <strong>Craeted on:</strong>
+        <p>{{ appInfoModel.created_on }}</p>
+    </div>
+
+    <div>
+        <strong>Last deployed on:</strong>
+        <p>{{ appInfoModel.last_deployed_on }}</p>
+    </div>
+
+    <div>
+        <strong>Sonar key:</strong>
+        <p>{{ appInfoModel.sonar_key }}</p>
+    </div>
+
+    <div>
+        <strong>Code quality:</strong>
+        <p>{{ appInfoModel.code_quality }}</p>
+    </div>
+
+    <div>
+        <strong>Code coverage:</strong>
+        <p>{{ appInfoModel.code_coverage }}</p>
+    </div>
+   
+</div>

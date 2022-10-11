@@ -1,0 +1,63 @@
+<div class="container">
+    <h1>Create New App</h1>
+  
+    <a href="#" routerLink="/app/index" class="btn btn-primary">Back</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="appName">App Name:</label>
+            <input 
+                formControlName="appName"
+                id="appName" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['appName'].touched && f['appName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['appName'].errors && f['appName'].errors['required']">App Name is required.</div>
+            </div>
+        </div>
+  
+        <div class="form-group">
+            <label for="sonarKey">Sonar Key</label>
+            <input 
+                formControlName="sonarKey"
+                id="sonarKey" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['sonarKey'].touched && f['sonarKey'].invalid" class="alert alert-danger">
+                <div *ngIf="f['sonarKey'].errors && f['sonarKey'].errors['required']">Sonar Key is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="codeQuality">Code quality:</label>
+            <input 
+                formControlName="codeQuality"
+                id="codeQuality" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['codeQuality'].touched && f['codeQuality'].invalid" class="alert alert-danger">
+                <div *ngIf="f['codeQuality'].errors && f['codeQuality'].errors['required']">Code quality is required.</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="codeCoverage">Code coverage:</label>
+            <input 
+                formControlName="codeCoverage"
+                id="codeCoverage" 
+                type="text" 
+                class="form-control">
+            <div *ngIf="f['codeCoverage'].touched && f['codeCoverage'].invalid" class="alert alert-danger">
+                <div *ngIf="f['codeCoverage'].errors && f['codeCoverage'].errors['required']">Code coverage is required.</div>
+            </div>
+        </div>
+
+
+         <div>
+            <br>
+         </div>
+  
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>

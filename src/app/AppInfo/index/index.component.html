@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>CRUD Example - appInfoModel</h1>
+  
+    <a href="#" routerLink="/app/create/" class="btn btn-success">Create New App</a>
+    
+    <table class="table table-striped">
+    	<thead>
+	      	<tr>
+		        <th>ID</th>
+		        <th>Name</th>
+		        <th>Code Quality</th>
+		        <th width="250px">Action</th>
+	      	</tr>
+	    </thead>
+      	<tbody>
+	      	<tr *ngFor="let item of appInfoModels">
+		        <td>{{ item.id }}</td>
+		        <td>{{ item.app_name }}</td>
+		        <td>{{ item.code_quality }}</td>
+		        <td>
+		          <a href="#" [routerLink]="['/app/', item.id, 'view']" class="btn btn-outline-secondary btn-sm">View</a>
+		          <a href="#" [routerLink]="['/app/', item.id, 'edit']" class="btn btn-outline-primary btn-sm">Edit</a>
+		          <button type="button" (click)="deletePost(item.id)" class="btn btn-outline-danger btn-sm">Delete</button>
+		        </td>
+	      	</tr>
+ 	   </tbody>
+    </table>
+ </div>
